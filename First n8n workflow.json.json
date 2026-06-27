@@ -1,0 +1,76 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ef0b3389-5ab1-4a49-883a-3b3dcc5185b5",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "fromEmail": "studywithme77810@gmail.com",
+        "toEmail": "kaifmd61477@gmail.com",
+        "subject": "About your n8n journey",
+        "emailFormat": "text",
+        "text": "Hello Kaif,\n\nI'm sending this email to you from the future to let you know that you successfully completed the first step of your n8n learning journey.\n\nToday, you took your first real step into automation by setting up n8n. Keep going this is just the beginning.\n\nKeep learning consistently. Build one workflow at a time, make mistakes, debug them, and keep improving. A few months from now, you'll look back at this email and realize this was the day your automation journey truly began.\n\nSee you in the future.\n\nBest regards,\nMd Kaif (from the Future)",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "ff06ca51-83c0-4f12-afed-5eac93349727",
+      "name": "Send an Email",
+      "webhookId": "e32087d3-d03c-416e-b147-ed6a13d63903",
+      "credentials": {
+        "smtp": {
+          "id": "UcLeO8dQTk8hGX5e",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send an Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "055ec7a7-1b21-4988-91c3-cd4a4029bbd0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3ad997513a69163c5b1fb50a5c7e96821b6e288d457039f33b6fde6e4139746e"
+  },
+  "nodeGroups": [],
+  "id": "6K9TDDa3igYk6W5D",
+  "tags": []
+}
